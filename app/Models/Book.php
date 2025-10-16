@@ -22,6 +22,7 @@ class Book extends Model
         'total_copies',
         'available_copies',
         'price',
+        'cover_image',
         'status',
     ];
 

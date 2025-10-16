@@ -28,7 +28,7 @@ return new class extends Migration
 
             // for searching
             $table->index(['title','auther_id']);
-            $table->index('isnb');
+            $table->index('isbn');
 
 
         });
