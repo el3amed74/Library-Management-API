@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Requests;
-
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class BookRequest extends FormRequest
+class UpdateBookRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +23,12 @@ class BookRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
-            'isbn' => 'required|string|max:255|unique:books,isbn',
+            'isbn' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('books', 'isbn')->ignore($this->book->id)
+            ],
             'description' => 'nullable|string',
             'auther_id' => 'required|exists:authers,id',
             'genre' => 'nullable|string',
