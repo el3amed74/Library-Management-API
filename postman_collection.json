@@ -1,0 +1,792 @@
+{
+	"info": {
+		"_postman_id": "f3f6788c-c266-4f2f-b0a7-346b2e8caee1",
+		"name": "Lib-mgt API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48945024"
+	},
+	"item": [
+		{
+			"name": "Authers",
+			"item": [
+				{
+					"name": "get all authers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|jXgjTC6cLiR0hfdx2z1XhPPViOnKem8v2qn1yOdlf2853f34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/authers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"authers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new auther",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/authers?name=salem kame &bio=welcome to api&nationality=egyption",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"authers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "salem kame "
+								},
+								{
+									"key": "bio",
+									"value": "welcome to api"
+								},
+								{
+									"key": "nationality",
+									"value": "egyption"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get an auther",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/authers/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"authers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update an auther",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/authers/1?name=updated auther2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"authers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "updated auther2"
+								},
+								{
+									"key": "bio",
+									"value": "updated bio",
+									"disabled": true
+								},
+								{
+									"key": "nationality",
+									"value": "updated nationality",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete an auther",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/authers/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"authers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Members",
+			"item": [
+				{
+					"name": "create new member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/members?name=Ahmed Salem&email=ahmed22@test.com&address=test adress2&membership_date=1997-7-3&status=active",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"members"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ahmed Salem"
+								},
+								{
+									"key": "email",
+									"value": "ahmed22@test.com"
+								},
+								{
+									"key": "address",
+									"value": "test adress2"
+								},
+								{
+									"key": "membership_date",
+									"value": "1997-7-3"
+								},
+								{
+									"key": "status",
+									"value": "active"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all members",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/members",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"members"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ali@test.com",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "inactive",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a member",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/members/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"members",
+								"1"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ali@test.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a member",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/members/1?name=Ahmed&email=ahmed@test.com&status=inactive",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"members",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ahmed"
+								},
+								{
+									"key": "email",
+									"value": "ahmed@test.com"
+								},
+								{
+									"key": "status",
+									"value": "inactive"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a member",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/members/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"members",
+								"3"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ali@test.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrowing",
+			"item": [
+				{
+					"name": "add new borrowing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/borrowings?book_id=8&member_id=1&borrowed_date=2025-9-02&due_date=2025-10-2&status=borrowed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"borrowings"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "8"
+								},
+								{
+									"key": "member_id",
+									"value": "1"
+								},
+								{
+									"key": "borrowed_date",
+									"value": "2025-9-02"
+								},
+								{
+									"key": "due_date",
+									"value": "2025-10-2"
+								},
+								{
+									"key": "status",
+									"value": "borrowed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all borrowings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/borrowings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"borrowings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list overdue",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/borrowings/overdue/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"borrowings",
+								"overdue",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "get all books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ahmed",
+									"disabled": true
+								},
+								{
+									"key": "genre",
+									"value": "fiction",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/books?title=book23&isbn=abcd11133&auther_id=4&total_copies=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "book23"
+								},
+								{
+									"key": "isbn",
+									"value": "abcd11133"
+								},
+								{
+									"key": "auther_id",
+									"value": "4"
+								},
+								{
+									"key": "total_copies",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/books/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/books/1?description=add book description&title=new book&isbn=ISBN-123&auther_id=2&total_copies=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"1"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "add book description"
+								},
+								{
+									"key": "title",
+									"value": "new book"
+								},
+								{
+									"key": "isbn",
+									"value": "ISBN-123"
+								},
+								{
+									"key": "auther_id",
+									"value": "2"
+								},
+								{
+									"key": "total_copies",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/books/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/register?name=Ali Salem&email=ali@test.com&password=1234567890&password_confirmation=1234567890",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ali Salem"
+								},
+								{
+									"key": "email",
+									"value": "ali@test.com"
+								},
+								{
+									"key": "password",
+									"value": "1234567890"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "1234567890"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/login?email=ali@test.com&password=1234567890",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ali@test.com"
+								},
+								{
+									"key": "password",
+									"value": "1234567890"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|57ITeP3uR07nYkdZHQGTy1rPLvDoTFDB2qcNASwU31914701",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|jXgjTC6cLiR0hfdx2z1XhPPViOnKem8v2qn1yOdlf2853f34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
